@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:checked="true"
+            android:id="@+id/cat_00"
+            android:title="Todos" />
+        <item
+            android:id="@+id/cat_01"
+            android:title="Elétrico" />
+        <item
+            android:id="@+id/cat_02"
+            android:title="Fogo" />
+        <item
+            android:id="@+id/cat_03"
+            android:title="Grama" />
+        <item
+            android:id="@+id/cat_04"
+            android:title="Inseto" />
+    </group>
+
+    <item android:title="Interno">
+        <menu>
+            <item
+                android:id="@+id/config"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Meus compartilhamentos" />
+            <item
+                android:id="@+id/contato"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Contato equipe app" />
+        </menu>
+    </item>
+
+</menu>

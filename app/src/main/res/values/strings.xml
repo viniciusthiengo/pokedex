@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pokédex</string>
+
+    <string name="navigation_drawer_open">Abrir menu gaveta</string>
+    <string name="navigation_drawer_close">Fechar menu gaveta</string>
+
+    <string name="action_settings">Configurações</string>
+</resources>
