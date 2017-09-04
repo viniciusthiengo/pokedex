@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -5,7 +6,12 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@drawable/background_pokedex</item>
+
         <item name="android:fontFamily">@font/pokemon_hollow</item>
+    </style>
+
+    <style name="fontePokemon" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/pokemon_solid</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

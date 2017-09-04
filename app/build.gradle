@@ -31,4 +31,6 @@ dependencies {
 
     /* PARA TRABALHO COMPLETO COM O CardView */
     implementation 'com.android.support:cardview-v7:26.0.1'
+
+    implementation 'com.android.support:support-compat:26.0.1'
 }

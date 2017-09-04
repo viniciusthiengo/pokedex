@@ -1,10 +1,10 @@
 package thiengo.com.br.pokdex
 
+import android.graphics.Typeface
 import android.os.Bundle
 import android.support.v4.content.res.ResourcesCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
-import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_detalhes.*
@@ -33,6 +33,7 @@ class DetalhesActivity :
         ct_layout.setExpandedTitleTypeface( ResourcesCompat.getFont(this, R.font.pokemon_solid) )
 
         pokemon = intent.getParcelableExtra<Pokemon>(Pokemon.KEY)
+
         iv_header.setImageResource( pokemon?.imagemRes ?: 0 )
         tv_descricao.text = pokemon?.descricao
         tv_numero.text = pokemon?.numero.toString().padStart(3, '0')
@@ -60,17 +61,13 @@ class DetalhesActivity :
     }
 
     fun customToast(){
-        val inflater = layoutInflater
-        val layout = inflater.inflate(R.layout.toast_custom,
-                findViewById<ViewGroup>(R.id.custom_toast_container) )
+        val llToast = layoutInflater.inflate(R.layout.toast_custom, findViewById(R.id.ll_toast))
+        val tvInfo = llToast.findViewById<TextView>( R.id.tv_info )
+        tvInfo.typeface = Typeface.create("sans-serif", Typeface.NORMAL)
 
-        val text = layout.findViewById<TextView>(R.id.text)
-        text.text = "Ainda falta implementar esta parte"
-        text.typeface = ResourcesCompat.getFont(this@DetalhesActivity, R.font.pokemon_solid)
-
-        val toast = Toast(applicationContext)
-        toast.duration = Toast.LENGTH_LONG
-        toast.view = layout
+        val toast = Toast( applicationContext )
+        toast.duration = Toast.LENGTH_SHORT
+        toast.view = llToast
         toast.show()
     }
 }

@@ -8,8 +8,8 @@ import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.StaggeredGridLayoutManager
-import android.text.Spannable
 import android.text.SpannableString
+import android.text.Spanned
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -27,16 +27,17 @@ class PokemonsActivity :
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pokemons)
         setSupportActionBar(toolbar)
-        applyToolbarCustomFont()
 
-        fab.setOnClickListener { customSnackbar( it ) }
+        fab.setOnClickListener {
+            customSnackbar( it )
+        }
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
 
-        customFontNavigationViewMenu()
+        customFontNavigationViewItem()
         initRecycler()
     }
 
@@ -63,57 +64,50 @@ class PokemonsActivity :
         }
     }
 
-    fun customSnackbar( view: View ) {
-        val snackBar = Snackbar
-            .make(
-                view,
-                "Ainda falta implementar uma ação",
-                Snackbar.LENGTH_LONG)
-            .setAction("Ação", null)
+    fun customSnackbar( view: View){
+        val snackbar = Snackbar
+                .make( view,"Ainda falta implementar uma ação", Snackbar.LENGTH_LONG)
+                .setAction("Ação", null)
 
-        val tv = snackBar.getView().findViewById<TextView>(android.support.design.R.id.snackbar_text)
-        val font = ResourcesCompat.getFont(this@PokemonsActivity, R.font.pokemon_solid)
-        tv.typeface = font
+        val tv = snackbar.view.findViewById<TextView>( android.support.design.R.id.snackbar_text )
+        tv.typeface = Typeface.create("sans-serif", Typeface.NORMAL)
 
-        snackBar.show()
+        snackbar.show()
     }
 
-    fun applyToolbarCustomFont() {
-        for (i in 0..toolbar.childCount - 1) {
-            val view = toolbar.getChildAt(i)
-            if (view is TextView) {
-                if (view.text == toolbar.title) {
-                    view.typeface = ResourcesCompat.getFont(this, R.font.pokemon_solid)
-                    break
-                }
-            }
-        }
-    }
-
-    private fun customFontNavigationViewMenu() {
+    fun customFontNavigationViewItem(){
+        val sansSerif = Typeface.create("sans-serif", Typeface.NORMAL)
+        val pokemonSolid = ResourcesCompat.getFont(this, R.font.pokemon_solid) ?: sansSerif
         val menu = nav_view.menu
-        for (i in 0..menu.size() - 1) {
-            val menuItem = menu.getItem(i)
-            setCustomFontMenuItem(menuItem)
 
-            if( menuItem.subMenu != null ){
-                val subMenu = menuItem.subMenu
-                for (j in 0..subMenu.size() - 1) {
-                    val menuItem2 = subMenu.getItem(j)
-                    setCustomFontMenuItem(menuItem2)
+        for( i in 0..menu.size() - 1 ){
+            val item = menu.getItem( i )
+            setCustomFontItem( item, sansSerif )
+
+            if( item.subMenu != null ){
+                setCustomFontItem( item, pokemonSolid )
+                val subMenu = item.subMenu
+
+                for( j in 0..subMenu.size() - 1 ) {
+                    val subItem = subMenu.getItem(j)
+                    setCustomFontItem( subItem, sansSerif )
                 }
             }
         }
+
     }
 
-    private fun setCustomFontMenuItem(menuItem: MenuItem) {
-        val font = ResourcesCompat.getFont(this, R.font.pokemon_adaptado)
-        val textItem = SpannableString(menuItem.getTitle())
+    fun setCustomFontItem( item: MenuItem, typeface: Typeface ){
+        val textItem = SpannableString( item.title )
         textItem.setSpan(
-            CustomTypefaceSpan(font ?: Typeface.DEFAULT),
-            0,
-            textItem.length,
-            Spannable.SPAN_INCLUSIVE_INCLUSIVE )
-        menuItem.setTitle(textItem)
+                CustomTypefaceSpan( typeface ),
+                0,
+                textItem.length,
+                Spanned.SPAN_INCLUSIVE_INCLUSIVE
+        )
+
+        item.title = textItem
     }
 }
+
+

@@ -10,9 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import thiengo.com.br.pokdex.domain.Pokemon
 
-/**
- * Created by viniciusthiengo on 27/08/17.
- */
+
 class PokemonsAdapter(
         private val context: Context,
         private val pokemons: List<Pokemon>) :

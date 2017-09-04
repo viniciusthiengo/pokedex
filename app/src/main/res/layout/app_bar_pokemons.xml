@@ -13,6 +13,7 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
+            app:titleTextAppearance="@style/fontePokemon"
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
@@ -24,8 +25,8 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_pokemons"
         android:layout_width="match_parent"
-        android:padding="6dp"
         android:layout_height="match_parent"
+        android:padding="6dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <android.support.design.widget.FloatingActionButton

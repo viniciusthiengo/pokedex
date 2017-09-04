@@ -32,9 +32,9 @@
             android:id="@+id/tv_numero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:layout_below="@+id/iv_pokemon"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/iv_pokemon" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tv_nome"
@@ -46,15 +46,15 @@
             android:textSize="16sp" />
 
         <TextView
-            android:layout_marginTop="4dp"
-            android:textSize="12sp"
+            android:fontFamily="sans-serif"
             android:id="@+id/tv_tipo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:fontFamily="sans-serif"
-            android:layout_below="@+id/tv_nome" />
+            android:layout_below="@+id/tv_nome"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp" />
 
     </RelativeLayout>
 

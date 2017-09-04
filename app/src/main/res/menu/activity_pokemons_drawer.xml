@@ -5,8 +5,8 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:checked="true"
             android:id="@+id/cat_00"
+            android:checked="true"
             android:title="Todos" />
         <item
             android:id="@+id/cat_01"
@@ -34,5 +34,4 @@
                 android:title="Contato equipe app" />
         </menu>
     </item>
-
 </menu>

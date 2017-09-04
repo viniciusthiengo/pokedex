@@ -30,14 +30,14 @@
         <TextView
             android:id="@+id/tv_descricao"
             android:layout_width="wrap_content"
+            android:fontFamily="sans-serif"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/tv_t_descricao"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:fontFamily="sans-serif" />
+            android:layout_marginTop="4dp" />
 
         <TextView
             android:id="@+id/tv_t_numero"
@@ -58,11 +58,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:fontFamily="sans-serif"
             android:layout_below="@+id/tv_t_numero"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:fontFamily="sans-serif" />
+            android:layout_marginTop="4dp" />
 
         <TextView
             android:id="@+id/tv_t_altura"
@@ -85,19 +85,19 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/tv_t_altura"
             android:layout_marginLeft="16dp"
+            android:fontFamily="sans-serif"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:fontFamily="sans-serif" />
+            android:layout_marginTop="4dp" />
 
         <TextView
             android:id="@+id/tv_t_peso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
+            android:fontFamily="@font/pokemon_solid"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/tv_altura"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/pokemon_solid"
             android:text="Peso"
             android:textColor="@color/colorTitleText"
             android:textSize="@dimen/title_text_size" />
@@ -107,12 +107,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
+            android:fontFamily="sans-serif"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/tv_t_peso"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:fontFamily="sans-serif" />
+            android:layout_marginTop="4dp" />
 
         <TextView
             android:id="@+id/tv_t_sexo"
@@ -121,8 +121,8 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/tv_peso"
-            android:layout_marginTop="10dp"
             android:fontFamily="@font/pokemon_solid"
+            android:layout_marginTop="10dp"
             android:text="Sexo"
             android:textColor="@color/colorTitleText"
             android:textSize="@dimen/title_text_size" />
@@ -133,11 +133,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:fontFamily="sans-serif"
             android:layout_below="@+id/tv_t_sexo"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:fontFamily="sans-serif" />
+            android:layout_marginTop="4dp" />
 
         <TextView
             android:id="@+id/tv_t_categoria"
@@ -155,14 +155,14 @@
         <TextView
             android:id="@+id/tv_categoria"
             android:layout_width="wrap_content"
+            android:fontFamily="sans-serif"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/tv_t_categoria"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:fontFamily="sans-serif" />
+            android:layout_marginTop="4dp" />
 
         <TextView
             android:id="@+id/tv_t_habilidades"
@@ -186,8 +186,8 @@
             android:layout_below="@+id/tv_t_habilidades"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:fontFamily="sans-serif" />
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="4dp" />
 
         <TextView
             android:id="@+id/tv_t_tipo"
@@ -197,8 +197,8 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/tv_habilidades"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/pokemon_solid"
             android:text="Tipo"
+            android:fontFamily="@font/pokemon_solid"
             android:textColor="@color/colorTitleText"
             android:textSize="@dimen/title_text_size" />
 
@@ -210,9 +210,9 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/tv_t_tipo"
             android:layout_marginLeft="16dp"
+            android:fontFamily="sans-serif"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:fontFamily="sans-serif" />
+            android:layout_marginTop="4dp" />
 
         <TextView
             android:id="@+id/tv_t_fraquezas"
@@ -222,8 +222,8 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/tv_tipo"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/pokemon_solid"
             android:text="Fraquezas"
+            android:fontFamily="@font/pokemon_solid"
             android:textColor="@color/colorTitleText"
             android:textSize="@dimen/title_text_size" />
 
@@ -235,8 +235,8 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/tv_t_fraquezas"
             android:layout_marginLeft="16dp"
+            android:fontFamily="sans-serif"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:fontFamily="sans-serif" />
+            android:layout_marginTop="4dp" />
     </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>
