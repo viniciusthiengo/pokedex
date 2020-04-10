@@ -20,7 +20,7 @@ Caso você queira isso, então será necessário atualiza-lo para o AndroidX. Al
 
 De qualquer forma, mesmo sem a atualização para o AndroidX o projeto deverá rodar sem problemas.
 
-### Conteúdos complementares
+### Conteúdo complementar
 
 O artigo do projeto deste repositório é o primeiro artigo de uma série de duas postagens do Blog Thiengo sobre a Fonts in XML API.
 
