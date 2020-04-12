@@ -6,7 +6,7 @@ Artigo que discute em detalhes a Fonts in XML, API Android de família de fontes
 
 <img src="https://www.thiengo.com.br/img/post/normal/5golfqt6d0hkh575ff95t5eeg71ee6f7a57ade2b1a3d11dbfaee5d3ba0.jpg" width="557" alt="Aplicativo Android Pokédex">
 
-O conteúdo do artigo também está disponível em [vídeos](https://www.thiengo.com.br/fontes-em-xml-android-o-configuracao-e-uso#title-31) e em [slides](https://www.thiengo.com.br/fontes-em-xml-android-o-configuracao-e-uso#title-34).
+O conteúdo do artigo também está disponível em [vídeo](https://www.thiengo.com.br/fontes-em-xml-android-o-configuracao-e-uso#title-31) e em [slides](https://www.thiengo.com.br/fontes-em-xml-android-o-configuracao-e-uso#title-34).
 
 ### Primeira parte
 
